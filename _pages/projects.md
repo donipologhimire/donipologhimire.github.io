@@ -23,7 +23,7 @@ horizontal: false
     <p>This project implements a Denoising Diffusion Probabilistic Model (DDPM) to learn a prior distribution over smooth, collision-free robot trajectories from expert demonstrations. The system consists of three main components: expert trajectory generation, model training, and inference.</p>
     
     <h4>1. Expert Trajectory Generation</h4>
-    <p>TWe create a dataset of expert trajectories using A* search algorithm on a grid-based map with obstacles. These trajectories serve as the ground truth for training the diffusion model.</p>
+    <p>We create a dataset of expert trajectories using A* search algorithm on a grid-based map with obstacles. These trajectories serve as the ground truth for training the diffusion model.</p>
     
     <p>Key features:</p>
     <ul>

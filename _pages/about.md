@@ -65,7 +65,8 @@ latest_posts:
 **Research:**
 My research focuses on robotics and multi-agent systems, specifically:
 - Developing algorithms for coverage and monitoring with collaborative multi-robot systems
-- Integrating multiple disciplines: Computer vision, Optimization, Control theory, Probabilistic machine learning, Variational inference, Graph theory
+- Integrating multiple disciplines: 
+  -Computer vision, Optimization, Control theory, Probabilistic machine learning, Variational inference, Graph theory
 - Designing advanced planning and deployment strategies for robotic cooperation
 
 

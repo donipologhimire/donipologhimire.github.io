@@ -480,7 +480,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/donipologhimire", "_blank");
+          window.open("https://www.linkedin.com/in/donipolo-ghimire", "_blank");
         },
       },{
         id: 'social-scholar',

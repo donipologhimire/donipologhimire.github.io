@@ -12,7 +12,97 @@ horizontal: false
 
 <h2 class="mt-4">Diffusion Based Planning</h2>
 
+<div class="mb-3">
+  <a href="https://github.com/donipologhimire/diffusion_based_planning" class="btn btn-sm btn-outline-primary" target="_blank">
+    <i class="fab fa-github mr-1"></i> View on GitHub
+  </a>
+</div>
 
+<div class="row mt-3">
+  <div class="col-12">
+    <p>This project implements a Denoising Diffusion Probabilistic Model (DDPM) to learn a prior distribution over smooth, collision-free robot trajectories from expert demonstrations. The system consists of three main components: expert trajectory generation, model training, and inference.</p>
+    
+    <h4>1. Expert Trajectory Generation</h4>
+    <p>TWe create a dataset of expert trajectories using A* search algorithm on a grid-based map with obstacles. These trajectories serve as the ground truth for training the diffusion model.</p>
+    
+    <p>Key features:</p>
+    <ul>
+      <li>Creates a binary obstacle map with walls and barriers</li>
+      <li>Generates start and goal points in free spaces</li>
+      <li>Uses A* search to find optimal paths</li>
+      <li>Normalizes and processes trajectories to a consistent format</li>
+      <li>Saves the dataset with trajectories and their conditions (start, goal, obstacle map)</li>
+    </ul>
+    
+    <div class="text-center">
+      <figure style="margin: 0 auto;">
+        <img src="{{ '/assets/img/diffusion_planning/expert_trajectory.png' | relative_url }}" 
+            alt="Expert trajectory generation" 
+            class="img-fluid rounded z-depth-1"
+            style="width: 300px; height: 300px; margin: 0 auto;">
+        <figcaption>Expert trajectory generation</figcaption>
+      </figure>
+    </div>
+    
+    <h4>2. Model Training</h4>
+    <p>We implement a diffusion model training pipeline.</p>
+    
+    <p>Key components:</p>
+    <ul>
+      <li>We load the expert trajectories and their conditions</li>
+      <li>Implements a conditional UNet architecture that takes trajectory state, time embedding, and environmental conditions</li>
+      <li>Trains the model to denoise random Gaussian noise into expert trajectories</li>
+      <li>Uses classifier-free guidance (CFG) for improved conditioning</li>
+      <li>Saves model checkpoints during training</li>
+    </ul>
+    
+    <h4>3. Inference</h4>
+    <p>Key features:</p>
+    <ul>
+      <li>Loads trained model checkpoints</li>
+      <li>Implements the reverse diffusion process with classifier-free guidance</li>
+      <li>Generates smooth, collision-free trajectories between any valid start and goal</li>
+      <li>Visualizes the results with the obstacle map</li>
+    </ul>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-center">
+          {% include figure.liquid 
+             path="assets/img/diffusion_planning/best_generated_trajectory.png"
+             title="Best generated trajectory" 
+             tyle="width: 80%; max-width: 300px; height: auto;"
+             class="img-fluid rounded z-depth-1"
+          %}
+        </div>
+      </div>
+
+      <div class="col-md-6">
+      <div class="text-center">
+        <figure>
+          <img src="{{ '/assets/img/diffusion_planning/trajectory_evolution_best.gif' | relative_url }}" 
+              alt="Trajectory evolution" 
+              class="img-fluid rounded z-depth-1"
+              style="width: 80%; max-width: 400px; height: auto;"
+              loading="eager">
+          <figcaption>Trajectory evolution animation</figcaption>
+        </figure>
+      </div>
+    </div>
+    </div>
+    
+    <h4>Denoising Process Visualization</h4>
+    <p>The diffusion model works by gradually denoising a random Gaussian noise distribution into a coherent trajectory. The following visualization shows this process:</p>
+    
+    <div class="text-center">
+      {% include figure.liquid 
+         path="assets/img/diffusion_planning/denoising_trajectory.png"
+         title="Denoising process visualization" 
+         class="img-fluid rounded z-depth-1"
+      %}
+    </div>
+  </div>
+</div>
 
 <!-- title -->
 <h2 class="mt-4">Research Posters</h2>

@@ -189,7 +189,30 @@ horizontal: false
 </script>
 
 
+<h2 class="mt-4"> Robot Teleoperation</h2>
 
+<!-- PDF Embed section -->
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="text-center">
+            <iframe src="{{ '/assets/pdf/DeepLearningTeleoperation.pdf' | relative_url }}" 
+                    width="100%" 
+                    height="700px" 
+                    frameborder="0">
+            </iframe>
+          </div>
+          <p class="card-text mt-2">
+            A robot teleoperation system using hand gesture recognition from ultra-wideband sensor data, leveraging Deep Neural Networks
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

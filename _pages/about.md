@@ -72,6 +72,10 @@ My research focuses on robotics and multi-agent systems, specifically:
 
 <br>
 **Previously:**
+
+- ***Summer 2025***: Research Engineer Intern at <a href='https://gatik.ai/'>GATIK AI</a> 
+  - Focus: Diffusion models to genereate kinematically feasible motion planners for Autonmous driving.
+
 - ***Summer 2024***: Research Intern at <a href='https://arl.devcom.army.mil/'>US DEVCOM Army Research Lab</a> 
   - Focus: Active source seeking and exploration algorithms for search-and-rescue mission.
 - ***Fall 2022***: Visiting Researcher at <a href='https://www.jpl.nasa.gov/'>NASA Jet Propulsion Laboratory</a>
